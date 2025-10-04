@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Invitación de Boda — Carlos & Isabel</title>
+  <meta name="description" content="¡Nos casamos!
+   Queremos compartir este día tan especial contigo. Fecha, iglesia y restaurante con mapa." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#b76e79;--muted:#6b7280;--bg:#fff}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.4;margin:0;background:linear-gradient(180deg,#fff,#fbf8f9);color:#111}
+    .container{max-width:800px;margin:32px auto;padding:24px}
+    header{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center}
+    header img{max-width:180px;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+    h1{font-size:clamp(1.6rem,3.6vw,2.4rem);margin:0;color:var(--accent)}
+    p.lead{margin:0;color:var(--muted)}
+    .card{background:rgba(255,255,255,0.9);border-radius:14px;padding:20px;margin-top:20px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    .row{display:flex;gap:18px;flex-wrap:wrap}
+    .col{flex:1 1 220px;min-width:220px}
+    .info h3{margin:0 0 6px 0}
+    .muted{color:var(--muted);font-size:0.95rem}
+    .map-wrap{height:320px;border-radius:10px;overflow:hidden}
+    iframe{width:100%;height:100%;border:0}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{background:transparent;border:1px solid #eee}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:0.9rem}
+    form.confirmacion{margin-top:20px;display:flex;flex-direction:column;gap:12px}
+    form.confirmacion input,form.confirmacion button{padding:10px;border-radius:8px;border:1px solid #ccc;font-size:1rem}
+    form.confirmacion button{background:var(--accent);color:white;font-weight:600;border:0;cursor:pointer}
+    @media (max-width:520px){.row{flex-direction:column}.col{min-width:unset}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+  <img src="C:\Users\lenovo\Desktop\WEB BODA\img\anillos2.jpg" alt="Anillos de boda" />
+  <h1>Carlos &amp; Isabel</h1>
+  <p>Tenemos el gusto de invitarte en este día tan importante de nuestras vidas "Nuestra Boda"</p>
+  <p>¡TE ESPERAMOS! Tu presencia será para nosotros el mejor regalo</p>
+  <p class="lead">Nos casamos el <strong id="fecha-display">7 de diciembre de 2025</strong></p>
+  </header>
+    <meta name="description" content="¡Nos casamos!
+   Queremos compartir este día tan especial contigo. Fecha, iglesia y restaurante con mapa." />
+    <section class="card">
+      <div class="row">
+        <div class="col info">
+          <h3>Iglesia</h3>
+          <p class="muted" id="iglesia-nombre">Ermita de Ntra. Señora de Consolación</p>
+          <p class="muted" id="iglesia-direccion">Cartaya (Huelva)</p>
+          <p class="muted">Hora: <strong id="iglesia-hora">12:00</strong></p>
+        </div>
+
+        <div class="col info">
+          <h3>Restaurante — Celebración</h3>
+          <p class="muted" id="rest-nombre">Convento de la Luz</p>
+          <p class="muted" id="rest-direccion">Lucena del Puerto (Huelva)</p>
+          <p class="muted">Hora: <strong id="rest-hora">14:30</strong></p>
+          <div class="cta">
+            <button class="btn btn-primary" id="btn-directions">Abrir en Google Maps</button>
+            <button class="btn btn-ghost" id="btn-whatsapp">Compartir por WhatsApp</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px">
+        <h3 style="margin:6px 0">Cómo llegar al restaurante</h3>
+        <div class="map-wrap" id="map-container">
+          <iframe id="gmap-iframe" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3174.012523064468!2d-6.771490797400476!3d37.29483702502607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0xd10324c33c1a55b%3A0xb7e3f3d48bd86945!2sErmita%20de%20la%20Consolaci%C3%B3n%2C%20Avenida%20Consolaci%C3%B3n%2C%20Cartaya!3m2!1d37.290664899999996!2d-7.1497977!4m5!1s0xd11c2be6bf0f02b%3A0x17923e3b4184b994!2sConvento%20de%20la%20Luz%2C%20s%2Fn%2C%2021820%20Lucena%20del%20Puerto%2C%20Huelva!3m2!1d37.2946677!2d-6.7664814!5e0!3m2!1ses!2ses!4v1757520863196!5m2!1ses!2ses" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <form class="confirmacion" action="https://docs.google.com/forms/d/e/FORM_ID/formResponse" method="POST" target="_blank">
+        <h3>Confirma tu asistencia</h3>
+        <input type="text" name="entry.123456" placeholder="Tu nombre" required>
+        <input type="number" name="entry.654321" placeholder="Número de acompañantes" min="0" required>
+        <button type="submit">Confirmar asistencia</button>
+      </form>
+
+    </section>
+
+    <footer>
+      
+    </footer>
+  </div>
+
+  <script>
+    const datos = {
+      novios: "José & Chari',
+      fechaTexto: 'Domingo, 7 de diciembre de 2025',
+      iglesia: {
+        nombre: 'Ermita de Ntra. Señora de Consolación',
+        direccion: 'Cartaya (Huelva)',
+        hora: '12:00'
+      },
+      restaurante: {
+        nombre: 'Convento de la Luz',
+        direccion: 'Lucena del Puerto (Huelva)',
+        hora: '14:30',
+        mapEmbed: 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3174.012523064468!2d-6.771490797400476!3d37.29483702502607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0xd10324c33c1a55b%3A0xb7e3f3d48bd86945!2sErmita%20de%20la%20Consolaci%C3%B3n%2C%20Avenida%20Consolaci%C3%B3n%2C%20Cartaya!3m2!1d37.290664899999996!2d-7.1497977!4m5!1s0xd11c2be6bf0f02b%3A0x17923e3b4184b994!2sConvento%20de%20la%20Luz%2C%20s%2Fn%2C%2021820%20Lucena%20del%20Puerto%2C%20Huelva!3m2!1d37.2946677!2d-6.7664814!5e0!3m2!1ses!2ses!4v1757520863196!5m2!1ses!2ses',
+        mapsLink: 'https://maps.app.goo.gl/Uvabv3g3X2RZf1Au7'
+      }
+    };
+
+    document.title = `Invitación — ${datos.novios}`;
+    document.querySelector('h1').textContent = datos.novios;
+    document.getElementById('fecha-display').textContent = datos.fechaTexto;
+    document.getElementById('iglesia-nombre').textContent = datos.iglesia.nombre;
+    document.getElementById('iglesia-direccion').textContent = datos.iglesia.direccion;
+    document.getElementById('iglesia-hora').textContent = datos.iglesia.hora;
+    document.getElementById('rest-nombre').textContent = datos.restaurante.nombre;
+    document.getElementById('rest-direccion').textContent = datos.restaurante.direccion;
+    document.getElementById('rest-hora').textContent = datos.restaurante.hora;
+
+    const iframe = document.getElementById('gmap-iframe');
+    iframe.src = datos.restaurante.mapEmbed;
+
+    document.getElementById('btn-directions').addEventListener('click', () => {
+      window.open(datos.restaurante.mapsLink, '_blank');
+    });
+
+    document.getElementById('btn-whatsapp').addEventListener('click', () => {
+      const pageUrl = window.location.href;
+      const text = `${datos.novios} - Te invitamos a nuestra boda el ${datos.fechaTexto} en ${datos.iglesia.nombre} (${datos.iglesia.hora}). Celebración en ${datos.restaurante.nombre}. Más info: ${pageUrl}`;
+      const encoded = encodeURIComponent(text);
+      const wa = `https://wa.me/?text=${encoded}`;
+      window.open(wa, '_blank');
+    });
+  </script>
+</body>
+</html>
